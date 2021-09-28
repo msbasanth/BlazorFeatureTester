@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\assets\lit-button.e31bb0bc.js.map" />
+    <Content Remove="wwwroot\assets\lit-button.js" />
+    <Content Remove="wwwroot\css\bootstrap\lit-button.e31bb0bc.js.map" />
+    <Content Remove="wwwroot\lit-button.e31bb0bc.js.map" />
+    <Content Remove="wwwroot\lit-button2.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-rc.1.21452.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0-rc.1.21452.15" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\BlazorTesterApp.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap\lit-button.js" />
+    <None Include="wwwroot\css\bootstrap\lit-button.js.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿@page "/"
+
+  <lit-button class="primary" @onclosed="HandleCustomEvent">Primary</lit-button>
+
+@code {
+
+    public class CustomEventArgs : EventArgs {
+        public string CustomProperty1 {get; set;}
+    }
+
+    [EventHandler("onclosed", typeof(CustomEventArgs), enableStopPropagation: true, enablePreventDefault: true)]
+    static class EventHandlers
+    {
+    }
+
+    void HandleCustomEvent(CustomEventArgs eventArgs)
+    {
+      Console.WriteLine("HandleCustomEvent");
+        // here you can access the data which was passed in from the Javascript side
+    }
+
+    private void OnCloseTab()
+    {
+      Console.WriteLine("OnCloseTab");
+    }
+}
