@@ -4,18 +4,9 @@
 
 @code {
 
-    public class CustomEventArgs : EventArgs {
-        public string CustomProperty1 {get; set;}
-    }
-
-    [EventHandler("onclosed", typeof(CustomEventArgs), enableStopPropagation: true, enablePreventDefault: true)]
-    static class EventHandlers
-    {
-    }
-
     void HandleCustomEvent(CustomEventArgs eventArgs)
     {
-      Console.WriteLine("HandleCustomEvent");
+      Console.WriteLine("HandleCustomEvent: " + eventArgs.CustomProperty1);
         // here you can access the data which was passed in from the Javascript side
     }
 

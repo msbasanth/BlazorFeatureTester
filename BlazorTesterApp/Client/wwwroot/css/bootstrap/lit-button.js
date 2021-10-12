@@ -1598,7 +1598,10 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
                         _this2.dispatchEvent(new CustomEvent("closed", {
                             bubbles: true,
-                            composed: true
+                            composed: true,
+                            detail: {
+                                customProperty: "Jaba1"
+                            }
                         }));
                     });
 
@@ -1660,7 +1663,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
         if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
             var hostname = "" || location.hostname;
             var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-            var ws = new WebSocket(protocol + '://' + hostname + ':' + "63579" + '/');
+            var ws = new WebSocket(protocol + '://' + hostname + ':' + "61754" + '/');
 
             ws.onmessage = function (event) {
                 checkedAssets = {};

@@ -20,12 +20,18 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script type="text/javascript" charset="utf-8" src="css/bootstrap/lit-button.js"></script>
+    <script type="text/javascript" charset="utf-8" src="css/bootstrap/lit-button.js"></script>    
 
     <script>
         Blazor.registerCustomEventType('closed', {
-            createEventArgs: { customProperty1: 'any value for property 1' }
+            createEventArgs: eventArgsCreator
         });
+
+        function eventArgsCreator (event) {
+            return {
+                customProperty1: event.detail.customProperty
+            };
+        }
     </script>
 </body>
 

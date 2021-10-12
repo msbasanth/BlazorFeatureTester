@@ -16,7 +16,7 @@ class LitButton extends LitElement {
         var button = this.shadowRoot.querySelector("button");
         button.addEventListener("click", (e) => {
             console.log("Dispatching closed from lit-button");
-            this.dispatchEvent(new CustomEvent("closed", { bubbles: true, composed: true }));
+            this.dispatchEvent(new CustomEvent("closed", { bubbles: true, composed: true, detail: { customProperty: "Jaba1" } }));
         });
 
         super.firstUpdated();
